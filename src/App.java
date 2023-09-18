@@ -9,6 +9,13 @@ public class App {
         System.out.println("    ");
         System.out.print("Fyll i dina uppgifter här: ");
         String text = tangentbord.nextLine();
+
+        //Organisering av information
+        System.out.println("    ");
+        int mellan1_index = text.indexOf(" ");
+        System.out.println("1:a mellanslagets teckenposition: "+mellan1_index);
+        String förnamn = text.substring(0,mellan1_index);
+        System.out.println("Förnamn: "+förnamn);
         tangentbord.close();
     }
 }
