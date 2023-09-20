@@ -33,12 +33,12 @@ public class App {
         String siffra_text = text.substring(mellan3_index+1, mellan4_index);
         int ålder = Integer.parseInt(siffra_text);
         System.out.println("Ålder:"+ålder);
+        tangentbord.close();
 
         //Räkna ut när någon fyller jämt nästa gång
         /* System.out.println("    ");
         int rest = ålder%10;
         int årkvar= 10-rest;
-        System.out.println("Om "+årkvar+" år så är din ålder jämn");
-        tangentbord.close(); */
+        System.out.println("Om "+årkvar+" år så är din ålder jämn"); */
     }
 }
