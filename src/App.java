@@ -10,7 +10,7 @@ public class App {
         System.out.print("Fyll i dina uppgifter här: ");
         String text = tangentbord.nextLine();
 
-        //Organisering av information
+        //Ta reda på mellanslagens plats
         System.out.println("    ");
         int mellan1_index = text.indexOf(" ");
         System.out.println("1:a mellanslagets teckenposition: "+mellan1_index);
@@ -20,6 +20,9 @@ public class App {
         System.out.println("3:e mellanslagets teckenposition: "+mellan3_index);
         int mellan4_index = text.indexOf(" ", mellan3_index+1);
         System.out.println("4:e mellanslagets teckenposition: "+mellan4_index);
+
+        //Organisera information från texten
+        System.out.println("    ");
         String förnamn = text.substring(0,mellan1_index);
         System.out.println("Förnamn: "+förnamn);
         String Efternamn = text.substring(mellan1_index, mellan2_index);
@@ -30,6 +33,12 @@ public class App {
         String siffra_text = text.substring(mellan3_index+1, mellan4_index);
         int ålder = Integer.parseInt(siffra_text);
         System.out.println("Ålder:"+ålder);
-        tangentbord.close();
+
+        //Räkna ut när någon fyller jämt nästa gång
+        /* System.out.println("    ");
+        int rest = ålder%10;
+        int årkvar= 10-rest;
+        System.out.println("Om "+årkvar+" år så är din ålder jämn");
+        tangentbord.close(); */
     }
 }
